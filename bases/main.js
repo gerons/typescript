@@ -15,6 +15,18 @@
     };
 })();
 (() => {
+    class Mutant {
+        constructor(name, realName) {
+            this.name = name;
+            this.realName = realName;
+            this.age = 30;
+        }
+        mutantPower(id) {
+            return `${this.name} is using his power with id: ${id}`;
+        }
+    }
+})();
+(() => {
     const client = {
         name: 'Fernando',
         age: 25,
@@ -24,7 +36,7 @@
             country: 'España'
         },
         getFullAddress(id) {
-            return `${this.address.city}, ${this.address.country}`;
+            return this.address.city;
         }
     };
     const client2 = {
@@ -35,6 +47,12 @@
             city: 'Barcelona',
             country: 'España'
         }
+    };
+})();
+(() => {
+    let addNumbersFunction;
+    addNumbersFunction = (a, b) => {
+        return 10;
     };
 })();
 //# sourceMappingURL=main.js.map

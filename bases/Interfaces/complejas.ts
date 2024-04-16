@@ -22,7 +22,7 @@
             country: 'España'
         },
         getFullAddress(id: string) {
-            return `${this.address.city}, ${this.address.country}`
+            return this.address.city
         }
     }
 
