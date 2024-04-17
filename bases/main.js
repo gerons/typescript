@@ -1,58 +1,11 @@
 "use strict";
-(() => {
-    let flash = {
-        name: 'Barry Allen',
-        age: 24,
-        powers: [1, 2]
+var Validations;
+(function (Validations) {
+    const validateText = (text) => {
+        return (text.length > 3) ? true : false;
     };
-    let superman = {
-        name: 'Clark Kent',
-        age: 60,
-        powers: [2],
-        getName() {
-            return this.name;
-        }
+    const validaDate = (fecha) => {
+        return (isNaN(fecha.valueOf())) ? false : true;
     };
-})();
-(() => {
-    class Mutant {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-            this.age = 30;
-        }
-        mutantPower(id) {
-            return `${this.name} is using his power with id: ${id}`;
-        }
-    }
-})();
-(() => {
-    const client = {
-        name: 'Fernando',
-        age: 25,
-        address: {
-            id: Date.now(),
-            city: 'Madrid',
-            country: 'España'
-        },
-        getFullAddress(id) {
-            return this.address.city;
-        }
-    };
-    const client2 = {
-        name: 'Luis',
-        age: 30,
-        address: {
-            id: Date.now(),
-            city: 'Barcelona',
-            country: 'España'
-        }
-    };
-})();
-(() => {
-    let addNumbersFunction;
-    addNumbersFunction = (a, b) => {
-        return 10;
-    };
-})();
+})(Validations || (Validations = {}));
 //# sourceMappingURL=main.js.map
