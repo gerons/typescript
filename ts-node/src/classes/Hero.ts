@@ -1,3 +1,5 @@
+import powers from '../data/powers'
+
 
 export class Hero {
 
@@ -7,4 +9,7 @@ export class Hero {
         public age: number
     ) {}
 
+    get power(): string {
+        return powers.find( power => power.id === this.powerId)?.desc || 'Not found'
+    }
 }
