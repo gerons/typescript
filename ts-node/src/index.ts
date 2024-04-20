@@ -1,7 +1,7 @@
-import { getPokemon } from "./generics/get-pokemon";
+import { Pokemon } from "./decorators/pokemon";
 
 
-getPokemon(1)
-    .then( pokemon => console.log( pokemon.name.toUpperCase() ) )
-    .catch( error => console.log( error ) )
-    .finally( () => console.log('Finalizado...') )
+const charmander = new Pokemon('charmander')
+charmander.publicApi = 'https://mapas-digitales.com'
+
+console.log(charmander.publicApi)
